@@ -496,3 +496,9 @@ Blockly.Arduino["array_create_with"]=function(block){
     code = '{' + code.join(',') + '}';
     return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
+
+Blockly.JavaScript['francas_block'] = function(block) {
+  // TODO: Assemble JavaScript into code variable.
+  var code = '...;\n';
+  return code;
+};

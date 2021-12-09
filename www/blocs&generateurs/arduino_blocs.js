@@ -736,3 +736,11 @@ Blockly.Blocks["eeprom_read"]={init:function(){
         this.setOutput(true, "Number");
         this.setTooltip(Blockly.Msg.STOCK3_TOOLTIP)}
 };
+
+Blockly.Blocks['francas_block'] = {
+  init: function() {
+    this.setColour(230);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
