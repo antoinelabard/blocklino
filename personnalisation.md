@@ -28,9 +28,27 @@ Si la catégorie n'apparaît pas au chargement du site, il se peut que vous devi
 ![Activation de la catégorie dans les paramètres du site](Screenshot_20211210_160614.png)
 
 ## Création d'un bloc
+### Création de l'interface du block
 Pour faciliter l'écriture du code définissant le comportement de notre bloc, nous pouvons utiliser l'outil Blockly Factory, disponible [en ligne](https://blockly-demo.appspot.com/static/demos/blockfactory/index.html) ou [en local](www/factory.html).
 ![](Screenshot_20211209_131412.png)
-Une fois le bloc crée, différents morceaux de code sont à insérer dans le projet de la manière suivante:
- - Le code dans la zone en rouge, celui de définition du bloc, doit être mis dans le fichier [`blocs&generateurs/arduino_blocs.js`](blocs&generateurs/arduino_blocs.js) .
+### Ajout du bloc au projet
+Une fois le bloc créé, différents morceaux de code sont à insérer dans le projet de la manière suivante:
+ - Le code dans la zone en rouge, celui de définition du bloc, doit être mis dans le fichier [`blocs&generateurs/arduino_blocs.js`](blocs&generateurs/arduino_blocs.js).
  - Le code dans la zone en bleu, celui qui génère le code à envoyer à la carte arduino en fonction des paramètres du bloc, doit être mis dans le fichier [`blocs&generateurs/blockly_generateurs_cpp.js`](blocs&generateurs/blockly_generateurs_cpp.js).
  - La ligne `<block type="francas_block1"></block>` doit être ajoutée dans le fichier [`toolbox/toolbox_arduino_all.xml`](toolbox/toolbox_arduino_all.xml), au sein de la catégorie voulue.
+### Personnalisation du générateur de code
+Nous travaillons avec une version de Blockly addaptée à Arduino. Cela implique certaines modificaitons dans le code. Modifiez la première ligne  du générateur de la manière suivante :
+```diff
+-Blockly.JavaScript['francas_block'] = function(block) {
++Blockly.Arduino['francas_block'] = function(block) {
+```
+Le but du générateur de code est de convertir la promesse abstraite que fait le block à l'utilisateur, en un code exécutable par une carte Arduino. Cette fonction retourne une variable de type `String` dont le contenu est le code écrit en C/C++ que doit exécuter la carte Arduino.
+
+Par exemple, pour générer le code en C `printf("hello world!");`, la fonction aura le corps suivant :
+```js
+Blockly.Arduino['francas_block'] = function(block) {
+  var code = "printf(\"hello world\");" 
+  return code;
+};
+```
+Se référer au guide donné au début du document pour avoir toutes les informations sur le générateur de code
