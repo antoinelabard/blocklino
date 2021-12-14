@@ -39,8 +39,8 @@ Une fois le bloc créé, différents morceaux de code sont à insérer dans le p
 ### Personnalisation du générateur de code
 Nous travaillons avec une version de Blockly addaptée à Arduino. Cela implique certaines modificaitons dans le code. Modifiez la première ligne  du générateur de la manière suivante :
 ```diff
--Blockly.JavaScript['francas_block'] = function(block) {
-+Blockly.Arduino['francas_block'] = function(block) {
+-   Blockly.JavaScript['francas_block'] = function(block) {
++   Blockly.Arduino['francas_block'] = function(block) {
 ```
 Le but du générateur de code est de convertir la promesse abstraite que fait le block à l'utilisateur, en un code exécutable par une carte Arduino. Cette fonction retourne une variable de type `String` dont le contenu est le code écrit en C/C++ que doit exécuter la carte Arduino.
 
@@ -51,4 +51,4 @@ Blockly.Arduino['francas_block'] = function(block) {
   return code;
 };
 ```
-Se référer au guide donné au début du document pour avoir toutes les informations sur le générateur de code
+Se référer au guide donné au début du document pour avoir toutes les informations sur le générateur de code.
