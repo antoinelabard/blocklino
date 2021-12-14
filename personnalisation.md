@@ -24,6 +24,9 @@ Pour s'assurer que la catégorie est affichée par défaut dans la boîte à out
 
 Pour personnaliser le nom de notre catégorie (celui affiché à l'utilisateur), il faut ajouter la variable `Blockly.Msg.francas_category= "Catégorie Des Francas";` dans le fichier [`www/lang/msg_fr.js`](www/lang/msg_fr.js).
 
+Si la catégorie n'apparaît pas au chargement du site, il se peut que vous deviez l'activer dans les préférences comme suit :
+![Activation de la catégorie dans les paramètres du site](Screenshot_20211210_160614.png)
+
 ## Création d'un bloc
 Pour faciliter l'écriture du code définissant le comportement de notre bloc, nous pouvons utiliser l'outil Blockly Factory, disponible [en ligne](https://blockly-demo.appspot.com/static/demos/blockfactory/index.html) ou [en local](www/factory.html).
 ![](Screenshot_20211209_131412.png)
