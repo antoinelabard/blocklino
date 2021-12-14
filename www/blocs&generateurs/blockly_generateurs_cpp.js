@@ -497,8 +497,14 @@ Blockly.Arduino["array_create_with"]=function(block){
     return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
-Blockly.JavaScript['francas_block'] = function(block) {
-  // TODO: Assemble JavaScript into code variable.
-  var code = '...;\n';
+Blockly.Arduino['francas_block'] = function(block) {
+  Blockly.Arduino.setups_["setup_output_13"]="pinMode(13, OUTPUT);";
+  var nbBlinks = Number(block.getFieldValue('nbBlinks'));
+  var code = "for (int count=0; count<" + nbBlinks + "; count++) {\n";
+  code += "\tdigitalWrite(13, HIGH);\n";
+  code += "\tdelay(1*1000);\n";
+  code += "\tdigitalWrite(13, LOW);\n";
+  code += "\tdelay(1*1000);\n";
+  code += "}\n";
   return code;
 };

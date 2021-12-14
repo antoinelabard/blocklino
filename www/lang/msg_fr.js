@@ -130,3 +130,4 @@ Blockly.Msg.badXml= "Erreur d’analyse du fichier :\n%1\n\nSélectionner 'OK' p
 Blockly.Msg.arduino_card= "Charger les paramètres pour la carte ";
 Blockly.Msg.aboutModalLabel= " à propos";
 Blockly.Msg.aboutBody= "C'est un mini environnement de développement pour langage graphique libre et open source. Les programmes sont créés par assemblage de blocs, ils sont ensuite compilés; puis envoyés dans la carte.";
+Blockly.Msg.francas_category= "Francas";
