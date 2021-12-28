@@ -203,8 +203,4 @@
 		<block type="eeprom_read"></block>		
         <block type="eeprom_write"></block>
 	</category>
-
-	<category name="francas_category" colour="#ff8000">
-		<block type="francas_block"></block>
-	</category>
 </toolbox>
