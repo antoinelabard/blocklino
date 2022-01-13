@@ -63,10 +63,6 @@ Factory, disponible [en ligne](https://blockly-demo.appspot.com/static/demos/blo
 Exemple de déclaration de bloc :
 
 ```js
-//  francas_bloc : Fait clignoter la led de la carte Arduino le nombre de fois indiqué par l'utilisateur. Ce bloc est à
-//      titre d'exemple et devrait être supprimé pour la mise en production.
-//      Lien vers la sauvegarde Blockly Factory :
-//      https://blockly-demo.appspot.com/static/demos/blockfactory/index.html#jkn7oz
 Blockly.Blocks['francas_block'] = {
   init: function() {
     this.appendDummyInput()
