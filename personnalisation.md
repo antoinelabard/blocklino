@@ -33,14 +33,6 @@ Une catégorie a la syntaxe suivante :
 
 **Attention à ne pas mettre d'espace dans le nom d'un bloc ou d'une catégorie !**
 
-Modifiez la variable suivante pour inclure le nom de notre nouvelle catégorie :
-
-```xml
-
-<parametre id="defaultCategories">CAT_LOGIC,CAT_MATH,...,CAT_STOCKAGE,francas_category</parametre>
-
-```
-
 Pour personnaliser le nom de notre catégorie (celui affiché à l'utilisateur), il faut ajouter la variable
 `Blockly.Msg.francas_category= "Catégorie Des Francas";` dans le fichier [`www/lang/msg_fr.js`](www/lang/msg_fr.js).
 
