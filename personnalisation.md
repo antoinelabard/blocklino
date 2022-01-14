@@ -23,7 +23,6 @@ fichier, entre les balises `<toolbox>` et `</toolbox>`.
 Une catégorie a la syntaxe suivante :
 
  ```xml
-
 <category name="francas_category" colour="#ff8000">
     <block type="francas_block1"></block>
     <block type="francas_block2"></block>
