@@ -23,6 +23,7 @@ fichier, entre les balises `<toolbox>` et `</toolbox>`.
 Une catégorie a la syntaxe suivante :
 
  ```xml
+
 <category name="francas_category" colour="#ff8000">
     <block type="francas_block1"></block>
     <block type="francas_block2"></block>
@@ -118,6 +119,9 @@ Blockly.Arduino['francas_block'] = function(block) {
   return code;
 };
 ```
+
+Le générateur de code doit être ajouté dans le
+fichier [www/blocs&generateurs/blockly_generateurs_cpp.js](www/blocs&generateurs/blockly_generateurs_cpp.js).
 
 Se référer au guide de Blockly donné au début du document pour avoir toutes les informations sur la façon de récupérer
 la valeur des paramètres du bloc.
