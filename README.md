@@ -1,8 +1,10 @@
 # <img src="https://fontainejp.github.io/media/icon.png" alt="Blocklino icon"> BLOCKLINO
 
-A mini development environment for free and open source graphic language. Programs are created by assembling blocks, they are then compiled and sent to the board.
+A mini development environment for free and open source graphic language. Programs are created by assembling blocks,
+they are then compiled and sent to the board.
 
-This app works on Windows operating systems. You can [download the latest release](https://github.com/fontainejp/blocklino/releases)
+This app works on Windows operating systems. You
+can [download the latest release](https://github.com/fontainejp/blocklino/releases)
 
 ![blocklino Screenshots](https://fontainejp.github.io/start/img/Capture.PNG)
 
@@ -11,10 +13,14 @@ This app works on Windows operating systems. You can [download the latest releas
 Blocklino is a web tool. You can give it a try [here.](https://fontainejp.github.io/blocklino.html)
 
 You can link directly to examples :
-* [make default LED blink](https://fontainejp.github.io/blocklino.html?url=./examples/blink.xml) 
-* [control LED Matrix](https://fontainejp.github.io/blocklino.html?url=./examples/matrice.xml) 
+
+* [make default LED blink](https://fontainejp.github.io/blocklino.html?url=./examples/blink.xml)
+* [control LED Matrix](https://fontainejp.github.io/blocklino.html?url=./examples/matrice.xml)
 
 Or watch the [video demo](https://www.youtube.com/watch?v=XqfNAjnf6_8)
+
+*Pour apprendre comment personnaliser le projet aux besoins de l'association des Francas de Seine Maritime,
+lire le document `personnalisation.md` dans la branche `demo` de ce projet.*
 
 ## How to Use
 
@@ -38,13 +44,14 @@ and
 > npm install -g node-gyp
 ```
 
-### Getting Started 
+### Getting Started
 
 ```bash
 > git clone https://github.com/fontainejp/blocklino
 > cd blocklino-master
 > npm install
 ```
+
 ### from Arduino IDE
 
 copy / paste all files and directories
@@ -55,15 +62,17 @@ copy / paste all files and directories
 | hardware\tools | compilation\arduino\tools |
 | tools-builder | compilation\arduino\tools-builder |
 
-### Build 
+### Build
 
-You can use electron-builder to pack your electron app in zip, nsis (Installer), portable (portable app without installation) formats.
+You can use electron-builder to pack your electron app in zip, nsis (Installer), portable (portable app without
+installation) formats.
 
 ```bash
 > cd blocklino-master
 > build --win --ia32
 ```
-or 
+
+or
 
 ```bash
 > cd blocklino-master
@@ -72,14 +81,14 @@ or
 
 ### Publish
 
-GitHub personal access token is required. You can generate it [here](https://github.com/settings/tokens/new).
-The access token should have the repo scope/permission.
-Define GH_TOKEN environment variable.
+GitHub personal access token is required. You can generate it [here](https://github.com/settings/tokens/new). The access
+token should have the repo scope/permission. Define GH_TOKEN environment variable.
 
 ```bash
 > cd blocklino-master
 > build --win --ia32 -p -always
 ```
+
 or
 
 ```bash
